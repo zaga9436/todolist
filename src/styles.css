@@ -1,0 +1,163 @@
+:root {
+  --bg: #f0f2f5; 
+  --surface: #ffffff; 
+  --accent: #4a76a8; 
+  --text: #1c1e21; 
+  --secondary: #65676b; 
+  --low: #67c23a; 
+  --medium: #e6a23c; 
+  --high: #f56c6c; 
+  --border: #dddfe2; 
+  --radius: 8px; 
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: 100vh;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar-header input {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.projects-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.projects-list li {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: var(--radius);
+  transition: background 0.2s;
+}
+
+.projects-list li:hover {
+  background-color: #e4e6eb;
+  font-weight: 500;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.main-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.main-controls input,
+.main-controls select {
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  transition: border 0.2s;
+}
+
+.main-controls input:focus,
+.main-controls select:focus {
+  border-color: var(--accent);
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #3b5d8c;
+}
+
+.tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tasks-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+}
+
+.tasks-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.tasks-list li button {
+  background-color: #f5f6f7;
+  color: var(--text);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.tasks-list li button:hover {
+  background-color: #e4e6eb;
+}
+
+.tasks-list li span {
+  flex-grow: 1;
+}

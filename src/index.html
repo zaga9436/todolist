@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ToDo App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app-grid">
+    <aside class="sidebar" id="projects-panel">
+      <header class="sidebar-header">
+        <h2>Проекты</h2>
+        <input type="text" id="new-project-name" placeholder="Название проекта">
+        <button id="btn-new-project" class="btn small">Добавить</button>
+      </header>
+
+      <nav class="projects-list" id="projects-list"></nav>
+
+      <footer class="sidebar-footer">
+        <small>LocalStorage: включен</small>
+      </footer>
+    </aside>
+
+    <main class="main" id="main-panel">
+      <header class="main-header">
+        <h1 id="current-project-name">Default</h1>
+        <div class="main-controls">
+          <input type="text" id="new-task-title" placeholder="Название задачи">
+          <input type="text" id="new-task-desc" placeholder="Описание">
+          <input type="date" id="new-task-due">
+          <select id="new-task-priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <select id="task-project-select"></select>
+          <button id="btn-new-task" class="btn">Добавить задачу</button>
+        </div>
+      </header>
+
+      <section class="tasks-list" id="tasks-list"></section>
+    </main>
+  </div>
+
+  <script type="module" src="index.js"></script>
+</body>
+</html>
